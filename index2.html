@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130429672-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-130429672-1');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GeoPolítica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GeoPolítica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>-->
+    <style>
+        #mapContainer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script src="js/index2.js"></script>
+</head>
+
+<body>
+
+    <div id="mapContainer"></div>
+
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script>
+        //*********************************************
+
+
+
+
+
+        //**********************************************
+        var map = L.map('mapContainer').setView([3.5289336, -76.2966477], 14);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+
+        var redicon = L.icon({
+            iconUrl: 'icon.png',
+
+
+            iconSize: [28, 40], // size of the icon
+            shadowSize: [50, 64], // size of the shadow
+            iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+            shadowAnchor: [4, 62], // the same for the shadow
+            popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+        });
+
+        var marcas = L.marker([3.5319457, -76.3168139], {
+                icon: redicon
+            }).addTo(map)
+            .bindPopup('<img src="f1.png" width="100"/>Responsable: Lider de la Comunidad responsable de organización y covocatorias <a href=\"https://scharss.github.io/" target=\"_blank\" title=\"Opens in a new window\">Estadísticas de Gestión</a>'),
+
+
+
+            marcas2 = L.marker([3.52112, -76.299904], {
+                icon: redicon
+            }).addTo(map)
+            .bindPopup('<img src="f1.png" width="100"/>Responsable: Lider de la Comunidad responsable de organización y covocatorias <a href=\"graficos.html" target=\"_blank\" title=\"Opens in a new window\">Estadísticas de Gestión</a>');
+
+        marcas4 = L.marker([3.53112, -76.298934], {
+                icon: redicon
+            }).addTo(map)
+            .bindPopup('<img src="f1.png" width="100"/>Responsable: Lider de la Comunidad responsable de organización y covocatorias <a href=\"graficos.html" target=\"_blank\" title=\"Opens in a new window\">Estadísticas de Gestión</a>');
+
+        marcas5 = L.marker([3.5335382, -76.3026989], {
+                icon: redicon
+            }).addTo(map)
+            .bindPopup('<img src="f1.png" width="100"/>Responsable: Lider de la Comunidad responsable de organización y covocatorias<a href=\"graficos.html" target=\"_blank\" title=\"Opens in a new window\">Estadísticas de Gestión</a>');
+
+        marcas6 = L.marker([3.53332, -76.296904], {
+                icon: redicon
+            }).addTo(map)
+            .bindPopup('<img src="f1.png" width="100"/>Responsable: Lider de la Comunidad responsable de organización y covocatorias<a href=\"graficos.html" target=\"_blank\" title=\"Opens in a new window\">Estadísticas de Gestión</a>');
+
+        marcas7 = L.marker([3.52212, -76.288904], {
+                icon: redicon
+            }).addTo(map)
+            .bindPopup('<img src="f1.png" width="100"/>Responsable: Lider de la Comunidad responsable de organización y covocatorias<a href=\"graficos.html" target=\"_blank\" title=\"Opens in a new window\">Estadísticas de Gestión</a>');
+
+        marcas8 = L.marker([3.50212, -76.3026989], {
+                icon: redicon
+            }).addTo(map)
+            .bindPopup('<img src="f1.png" width="100"/>Responsable: Lider de la Comunidad responsable de organización y covocatorias<a href=\"graficos.html" target=\"_blank\" title=\"Opens in a new window\">Estadísticas de Gestión</a>');
+
+
+        // var cities = L.layerGroup([marcas, marcas2, marcas4, marcas5]);
+
+        //var marcas3 = L.marker([3.52212, -76.288904]).addTo(map)
+        // .bindPopup('<img src="1m.jpg" width="100"/>Responsable: Lider de la Comunidad responsable de organización y covocatorias<a href=\"graficos.html" target=\"_blank\" title=\"Opens in a new window\">Estadísticas de Gestión</a>'),
+
+
+        //marcas7 = L.marker([3.52332, -76.296904]).addTo(map)
+        //.bindPopup('<img src="2h.jpg" width="100"/>Responsable: Lider de la Comunidad responsable de organización y covocatorias <a href=\"graficos.html" target=\"_blank\" title=\"Opens in a new window\">Estadísticas de Gestión</a>'),
+
+        //marcas8 = L.marker([3.52823844, -76.2984856]).addTo(map)
+        //.bindPopup('<img src="1h.jpg" width="100"/>Responsable: Lider de la Comunidad responsable de organización y covocatorias<a href=\"graficos.html" target=\"_blank\" title=\"Opens in a new window\">Estadísticas de Gestión</a>');
+        //var cities2 = L.layerGroup([marcas3, marcas7, marcas8]);
+
+        /*var polygon = L.polygon([
+    [3.52423844,-76.2894856],
+    [3.5332,-76.297904],
+    [3.5212,-76.289904]],{
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    
+}).addTo(map).bindPopup('<img src="22.png" width="100"/>Competencia Palmira es un municipio colombiano del departamento del Valle del Cauca en Colombia; localizado en la región sur del departamento. Es conocido como La Villa de las Palmas<a href=\"https://scharss.github.io/" target=\"_blank\" title=\"Opens in a new window\">Ir aquí</a>'),*/
+
+        /*var circle = L.circle([3.5347057, -76.2886028], {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.5,
+                radius: 500
+            }).addTo(map).bindPopup('<img src="22.png" width="100"/>Sin líder<a href=\"graficos.html" target=\"_blank\" title=\"Opens in a new window\">Estadísticas</a>'),
+
+            circle2 = L.circle([3.5509752, -76.3096519], {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.5,
+                radius: 500
+            }).addTo(map).bindPopup('<img src="22.png" width="100"/>Sin Líder<a href=\"graficos.html" target=\"_blank\" title=\"Opens in a new window\">Estadísticas</a>');
+
+        var competenciax = L.layerGroup([circle, circle2]); */
+
+
+        // var overlayMaps = {
+        // "Candidato A": cities,
+
+        // "Candidato B": cities2,
+        // "Sin Líder": competenciax
+
+
+
+        //};
+
+
+
+        //L.control.layers(overlayMaps).addTo(map);
+    </script>
+
+
+
+</body>
+
+</html>
